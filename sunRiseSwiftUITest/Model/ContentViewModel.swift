@@ -8,9 +8,12 @@
 import Foundation
 import CoreLocation
 
+
 class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate  {
 
     @Published var sunModels = [SunModel]()
+
+    let weatherModel = WeatherModel()
 
     let locationManager = CLLocationManager()
 
@@ -22,15 +25,22 @@ class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate  {
 
     func requestAllowOnceLocationPermission(){
         locationManager.requestLocation()
+       // locationManager.startUpdatingLocation()
     }
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])  {
         guard let latestLocation = locations.first else {
             // TODO: show error
             return
         }
 
+        Task {
+            await weatherModel.fetchWeather(lat: latestLocation.coordinate.latitude, long: latestLocation.coordinate.longitude)
+        }
+
+
         print("updated with \(latestLocation.coordinate.latitude)")
+      //  locationManager.stopUpdatingLocation()
 
     }
 
@@ -38,4 +48,9 @@ class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate  {
         print(error.localizedDescription)
     }
     
+}
+
+// WeatherKit extenion
+extension ContentViewModel {
+
 }

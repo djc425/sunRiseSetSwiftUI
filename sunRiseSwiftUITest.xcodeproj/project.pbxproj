@@ -16,6 +16,7 @@
 		6EA195CE290C501A0040A238 /* SunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA195CD290C501A0040A238 /* SunData.swift */; };
 		6EA195D2290C64320040A238 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA195D1290C64320040A238 /* ContentViewModel.swift */; };
 		6EA5365A2917F757002A06E8 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA536592917F757002A06E8 /* APIKey.swift */; };
+		6EB6B0CC29197EEF00CD49BC /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6B0CB29197EEF00CD49BC /* WeatherModel.swift */; };
 		6EE55D342910B443004FCDAE /* TestSymbolSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE55D332910B443004FCDAE /* TestSymbolSwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		6EA195CD290C501A0040A238 /* SunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunData.swift; sourceTree = "<group>"; };
 		6EA195D1290C64320040A238 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		6EA536592917F757002A06E8 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		6EB6B0CA29196FBE00CD49BC /* sunRiseSwiftUITest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sunRiseSwiftUITest.entitlements; sourceTree = "<group>"; };
+		6EB6B0CB29197EEF00CD49BC /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		6EE55D332910B443004FCDAE /* TestSymbolSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSymbolSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +66,7 @@
 		6E3B293228FE115400218941 /* sunRiseSwiftUITest */ = {
 			isa = PBXGroup;
 			children = (
+				6EB6B0CA29196FBE00CD49BC /* sunRiseSwiftUITest.entitlements */,
 				6E3B293328FE115400218941 /* sunRiseSwiftUITestApp.swift */,
 				6EA195D0290C64220040A238 /* View */,
 				6EA195CF290C64150040A238 /* Model */,
@@ -87,6 +91,7 @@
 				6EA195CD290C501A0040A238 /* SunData.swift */,
 				6EA195D1290C64320040A238 /* ContentViewModel.swift */,
 				6EA536592917F757002A06E8 /* APIKey.swift */,
+				6EB6B0CB29197EEF00CD49BC /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				6E3B293628FE115400218941 /* ContentView.swift in Sources */,
 				6EA5365A2917F757002A06E8 /* APIKey.swift in Sources */,
 				6EE55D342910B443004FCDAE /* TestSymbolSwitch.swift in Sources */,
+				6EB6B0CC29197EEF00CD49BC /* WeatherModel.swift in Sources */,
 				6EA195D2290C64320040A238 /* ContentViewModel.swift in Sources */,
 				6E3B294228FE125E00218941 /* SunRow.swift in Sources */,
 				6E3B293428FE115400218941 /* sunRiseSwiftUITestApp.swift in Sources */,
@@ -304,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sunRiseSwiftUITest/sunRiseSwiftUITest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sunRiseSwiftUITest/Preview Content\"";
@@ -315,13 +322,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DChester.sunRiseSwiftUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = DChester.sunRiseSetSwiftUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -337,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sunRiseSwiftUITest/sunRiseSwiftUITest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sunRiseSwiftUITest/Preview Content\"";
@@ -348,13 +356,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DChester.sunRiseSwiftUITest;
+				PRODUCT_BUNDLE_IDENTIFIER = DChester.sunRiseSetSwiftUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
