@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var locationTapped = true
     @State private var rowTapped: Bool = true
 
+    @StateObject private var contentViewModel = ContentViewModel()
+
     @State private var sunTest = [
         SunModel(time: "6:45am", imageName: "sunrise.fill", id: 0),
         SunModel(time: "7:14pm", imageName: "sunset.fill", id: 1)
@@ -29,6 +31,7 @@ struct ContentView: View {
                 LocationButton {
                     withAnimation {
                         locationTapped.toggle()
+                        contentViewModel.requestAllowOnceLocationPermission()
                     }
                     print(locationTapped)
                 }
